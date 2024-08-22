@@ -1,16 +1,26 @@
 /* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
+    .fixed-image {
+        position: fixed;
+        bottom: 10px;
+        right: 10px; /* Distance from the right */
+        width: 333px; /* Set the desired width of the image */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1000; /* Ensure it stays on top of other elements */
+    }
   }
   
   /* Navigation Bar */
   nav {
     background-color: #444;
+    background-image: url(Images/Image\ 20.webp);
     position: fixed; /* Keeps the nav bar at the top of the page */
     width: 100%; /* Make it stretch across the entire page */
     top: 0;
+    height: 60px;
     z-index: 1000; /* Ensures the nav bar stays above other elements */
   }
   
@@ -31,18 +41,31 @@ body {
     text-decoration: none;
   }
   
-  /* Header Section */
-  header {
-    background-image: url(Images/Image\ 20.webp)
+/* Header Section */
+header {
+    position: relative; /* Container for absolute positioning */
+    background-image: url('Images/Image 20.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-align: center;
-    padding: 100px 20px; /* Adjusted padding to account for fixed nav bar */
-    margin-top: 60px; /* Offset the header by the height of the nav bar */
-  }
-  
+    padding: 100px 20px;
+    height: 33vh; /* Adjust height as needed */
+}
+
+/* Positioning h1 at the bottom left */
+header h1 {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom of the header */
+    left: 20px; /* Distance from the left of the header */
+    margin: 0;
+    font-family: fantasy
+    font-size: 7em; /* Adjust font size */
+    text-shadow: deeppink;
+    
+}
+
+
   /* Responsive Media Queries */
   @media (max-width: 768px) {
     nav ul {
